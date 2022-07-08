@@ -1,0 +1,25 @@
+
+.wrapper{
+width: 100%;
+}
+.wrapper_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+
+}
+.wrapper_header-menu{
+    display: flex;
+  gap: 0 20px;
+}
+li {
+    list-style: none;
+   
+}
+a{
+    text-decoration: none;
+}
+.wrapper_banner-img{
+    width: 100%;
+}
