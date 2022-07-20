@@ -1,25 +1,20 @@
-
-.wrapper{
-width: 100%;
-}
-.wrapper_header{
+.wrapper-header-top{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
-    background-color: aquamarine;
+}
+.header-top-menu{
+    display: flex;
+    gap: 0 20px;
+   
 
 }
-.wrapper_header-menu{
-    display: flex;
-  gap: 0 20px;
-}
-li {
-    list-style: none;
-   
-}
-a{
+.item{
     text-decoration: none;
+    color: black;
+    font-size: 1rem;
 }
-.wrapper_banner-img{
-    width: 100%;
+.header-menu-right-items{
+    display: flex;
+    gap: 0 20px;
 }

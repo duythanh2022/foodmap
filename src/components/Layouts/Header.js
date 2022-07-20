@@ -1,27 +1,65 @@
-import React from 'react';
-import Logo from "../../assets/img/logo.png"
-import Banner from "../../assets/img/meals.jpeg"
-import styles from "./Header.css"
-const Header = ()=>{
-    return(
-        <>
-        <div className="wrapper">
-            <div className='wrapper_header'>
-                <img src={Logo}  alt="key"/>
-            <div className="wrapper_header-menu">
-                <ul >
-                   <a href='#'><li>Blog</li></a>
-                </ul>
-                <button className="btn-Login"> Login</button>
-                <button className="btn-register">Register</button>
-                <button className="btn-card">Card</button>
+import React from "react";
+import Logo from "../../assets/img/logo-godrej.png";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser,faBagShopping,faGlassMartini,faBars } from '@fortawesome/free-solid-svg-icons'
+import header from './Header.css'
+const Header = () => {
+  const menu = [
+    {
+      display: "Trang chủ",
+      path: "/",
+    },
+    {
+      display: "Sản phẩm",
+      path: "/catalog",
+    },
+    {
+      display: "Phụ kiện",
+      path: "/accessories",
+    },
+    {
+      display: "Liên hệ",
+      path: "/contact",
+    },
+  ];
+  return (
+    <>
+      <div className="wrapper">
+        <div className="wrapper-header-top">
+          <div className="header-logo">
+            <img src={Logo} alt="logo" />
+          </div>
+          <div className="header-top-menu">
+            <div className="header-menu-mobile-toggle">
+            <FontAwesomeIcon icon={faBars} />
             </div>
+            {menu.map((item, key) => (
+              <Router key={key}>
+                <div className="header-menu-left-items">
+                  <Link to={item.path} className="item">
+                    <span>{item.display}</span>
+                  </Link>
+                </div>
+              </Router>
+            ))}
+          </div>
+          <div className="header-menu-right-items">
+            <div className="item-search">
+            <FontAwesomeIcon icon={faGlassMartini} />
             </div>
-            <div className='wrapper_banner'>
-                <img className="wrapper_banner-img" src={Banner} alt="banner"/>
+            <div className="item-cart">
+              <a to="/cart">
+              <FontAwesomeIcon icon={faBagShopping} />
+              </a>
             </div>
+            <div className="item-user">
+            <FontAwesomeIcon icon={faUser} />
+            </div>
+          </div>
         </div>
-        </>
-    )
-}
-export default Header
+      </div>
+    </>
+  );
+};
+export default Header;
