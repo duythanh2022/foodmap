@@ -1,0 +1,26 @@
+//background-color
+$background-color1:#378FED;
+$background-color2:#464CAD;
+$background-color3:#C251D4;
+
+//color text
+$color1:#ffff;
+$color2:#000000;
+
+//set height
+$header-height:170px;
+$header-height-table:70px;
+$header-height-mobile:40px;
+$header-shrink-height: 70px;
+
+$colors: (
+    "blue": #4267b2,
+    "orange": #fbb96b,
+    "pink": #fe7e73,
+    "white": #fff,
+    "black": #000,
+    "main": $background-color1,
+);
+
+$mobile-width: 600px;
+$tablet-width: 1024px;

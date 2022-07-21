@@ -1,4 +1,5 @@
 import Header from './components/Layouts/Header';
+import sass from './sass/index.scss'
 function App() {
 
 

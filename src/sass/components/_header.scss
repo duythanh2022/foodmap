@@ -1,0 +1,113 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  transition: $header-height 0.3s ease;
+  z-index: 99;
+  background-color: $background-color1;
+
+  .container {
+    height: 100%;
+  }
+
+  .header-logo {
+    @include flex(center, center);
+    position: absolute;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    
+  }
+  .header-menu {
+    @include flex(center, space-between);
+    height: 100%;
+    font-size: 1.5rem;
+  }
+  .header-menu-left{
+   
+  }
+  .header-menu-left-items {
+    margin-left: 20px;
+    color: $color1;
+    // @include tablet {
+    //     margin-left: 20px;
+    // }
+
+    // @include mobile {
+    //     margin-left: 10px;
+    // }
+    
+  }
+  .item {
+    text-decoration: none;
+    color: $color1;
+    margin-left: 20px;
+  }
+  .header-menu-left-items .active {
+    font-weight: 600; 
+    color: $color1;
+    margin-left: 20px;
+  }
+  .header-menu-left-items :hover {
+    color: $background-color3;
+  }
+  .header-menu-right,
+  .header-menu-left {
+    @include flex(center, center);
+    height: 100%;
+  }
+  .header-menu-right {
+    font-size: 2.25rem;
+    .header-menu-right-items {
+      @include flex(center, center);
+    }
+    .header-menu-right-item {
+      margin-left: 20px;
+      color: $color1;
+    }
+  }
+
+  .header-menu-left {
+    .header-menu-mobile-toggle{
+        display: none;
+       
+      }
+      @include tablet{
+        .header-menu-mobile-toggle{
+            display: block;
+           
+          }
+      }
+    // @include tablet {
+    //     flex-direction: column;
+    //     background-color: $background-color3;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 50%;
+    //     height: 100vh;
+    //     // justify-content: flex-start;
+    //     padding-top: 30px;
+    //     // transform: translateX(-100%);
+    //     transition: transform 0.5s ease;
+    //     display: block;
+    //     .item {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         padding: 20px;
+            
+    //       }
+    //       .header-menu-left .active{
+    //         transform:translateX(0);
+    //       }
+    //       .header-menu-mobile-toggle{
+    //         display: block;
+           
+    //       }
+    // }
+  }
+  
+}
